@@ -1,0 +1,49 @@
+body {
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+tbody,
+.card,
+.front,
+.back {
+  display: block;
+}
+tbody {
+  width: 600px;
+
+  position: relative;
+}
+.card {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transform: rotateY(0);
+  user-select: none;
+}
+
+.isFlipped {
+  transform: rotateY(180deg);
+}
+.front {
+  background-color: orange;
+}
+.back {
+  background-color: red;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
